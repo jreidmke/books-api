@@ -2,7 +2,8 @@ const express = require("express");
 const Book = require("../models/book");
 
 const router = new express.Router();
-
+const { validate } = require("jsonschema");
+const bookSchemaAdd = require("../schemas/bookSchemaAdd");
 
 /** GET / => {books: [book, ...]}  */
 
